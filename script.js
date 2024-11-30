@@ -46,3 +46,28 @@ function updateSelectedItem() {
     const inputElement = document.getElementById("item");
     inputElement.value = selectElement.value;
 }
+
+function kirimPesanan(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById('nama').value;
+    const alamat = document.getElementById('alamat').value;
+    const item = document.getElementById('item').value || 'Tidak ada';
+    const harga = document.getElementById('harga').value || 'Tidak disebutkan';
+    const metodePemesanan = document.getElementById('metode-pemesanan').value || 'Tidak disebutkan';
+    const metodePembayaran = document.getElementById('metode-pembayaran').value || 'Tidak disebutkan';
+
+    // Format pesan
+    const pesan = `Halo, saya ingin memesan:
+Nama: ${nama}
+Alamat: ${alamat}
+Barang: ${item}
+Harga: ${harga}
+Metode Pemesanan: ${metodePemesanan}
+Metode Pembayaran: ${metodePembayaran}`;
+
+    const nomorWA = '6282161299141'; 
+    const urlWA = `https://wa.me/6282161299141${nomorWA}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(urlWA, '_blank');
+}
