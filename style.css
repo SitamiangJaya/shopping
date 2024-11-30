@@ -78,18 +78,22 @@ footer a {
 
 .slideshow-container {
     position: relative;
-    max-width: 800px;
+    max-width: 100%;
+    overflow: hidden;
     margin: 40px auto;
     height: 250px;
-    overflow: hidden;
-    display: flex;
-    gap: 20px;
-    border-radius: 10px;
+    width: 100%;
 }
 
-.frame img {
-    width: 100%;
+.slideshow {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.slideshow img {
+    width: 300px;
     height: 200px;
+    margin-right: 20px;
     border-radius: 10px;
 }
 
@@ -150,4 +154,111 @@ form button {
 
 form button:hover {
     background-color: #45a049;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 40px auto;
+    height: 250px;
+    width: 100%;
+}
+
+.slideshow {
+    display: flex;
+    animation: slide-right-to-left 20s linear infinite;
+}
+
+.slideshow img {
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.buttons-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.buttons-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+@keyframes slide-right-to-left {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
 }
