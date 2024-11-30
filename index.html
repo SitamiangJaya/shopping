@@ -8,17 +8,57 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <h1>Sitamiang Jaya</h1>
-            <div class="navbar-links">
-                <a href="https://wa.me/+6282183130984"class="whatsapp-link">Contact Us</a>
-                <a href="https://www.google.com/maps/place/Toko+Sitamiang+Jaya,+Sitamiang+Baru,+Kec.+Padangsidimpuan+Sel.,+Kota+Padang+Sidempuan,+Sumatera+Utara/data=!4m2!3m1!1s0x302c1c7e3bab70c7:0x870718abae5d55b8?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjE1NC4xMDMYACCenQoqdSw5NDI0MjU1Myw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NzExOCw0NzA4NDM5Myw5NDIxMzIwMEICSUQ%3D"
-                class="maps-link">Maps</a>
+      <header>
+    <nav class="navbar">
+        <h1>Sitamiang Jaya</h1>
+        <div class="navbar-links">
+            <a href="https://wa.me/+6282183130984"class="whatsapp-link">Contact Us</a>
+            <a href="https://www.google.com/maps/place/Toko+Sitamiang+Jaya,+Sitamiang+Baru,+Kec.+Padangsidimpuan+Sel.,+Kota+Padang+Sidempuan,+Sumatera+Utara/data=!4m2!3m1!1s0x302c1c7e3bab70c7:0x870718abae5d55b8?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjE1NC4xMDMYACCenQoqdSw5NDI0MjU1Myw5NDIyMzI5OSw5NDIxNjQxMyw5NDIxMjQ5Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxNzUyMyw5NDIxODY1Myw5NDIyOTgzOSw0NzA4NzExOCw0NzA4NDM5Myw5NDIxMzIwMEICSUQ%3D"
+            class="maps-link">Maps</a>
+        </div>
+    </nav>
+    <main>
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <div class="frame">
+                <img src="https://via.placeholder.com/300x200?text=Gambar+1" alt="Gambar 1">
             </div>
-        </nav>
-        
-        </header>
+            <div class="frame">
+                <img src="https://via.placeholder.com/300x200?text=Gambar+2" alt="Gambar 2">
+            </div>
+            <div class="frame">
+                <img src="https://via.placeholder.com/300x200?text=Gambar+3" alt="Gambar 3">
+            </div>
+        </div>
+
+        <!-- Tombol Pilihan -->
+        <div class="buttons-container">
+            <button onclick="tampilkanForm('Gambar 1', 100000)">Pesan Gambar 1 (Rp 100.000)</button>
+            <button onclick="tampilkanForm('Gambar 2', 150000)">Pesan Gambar 2 (Rp 150.000)</button>
+            <button onclick="tampilkanForm('Gambar 3', 200000)">Pesan Gambar 3 (Rp 200.000)</button>
+        </div>
+
+        <!-- Form Pemesanan (disembunyikan dulu) -->
+        <div class="form-container" id="formContainer" style="display: none;">
+            <h2>Form Pemesanan</h2>
+            <form id="formPemesanan" onsubmit="kirimPesanan(event)">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat Anda" required>
+
+                <label for="item">Gambar yang Dipilih:</label>
+                <input type="text" id="item" name="item" readonly>
+
+                <label for="harga">Harga:</label>
+                <input type="text" id="harga" name="harga" readonly>
+
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </main>
+    </header>
     <div class="blog">
         <a href="https://sitamiangjaya.shop/"class="blog-link">Back To Home</a>
     </div>
