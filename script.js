@@ -40,3 +40,9 @@ function kirimPesanan(event) {
     document.getElementById('formPemesanan').reset();
     document.getElementById('formContainer').style.display = 'none'; 
 }
+
+function updateSelectedItem() {
+    const selectElement = document.getElementById("item-select");
+    const inputElement = document.getElementById("item");
+    inputElement.value = selectElement.value;
+}
