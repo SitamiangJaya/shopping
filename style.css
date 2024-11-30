@@ -245,7 +245,7 @@ form button:hover {
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {}
     .slideshow img,
     .slideshow2 img {
         max-width: 100%;
