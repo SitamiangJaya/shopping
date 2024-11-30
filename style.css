@@ -262,3 +262,70 @@ form button:hover {
         transform: translateX(-100%); 
     }
 }
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 40px auto;
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slideshow {
+    display: flex;
+    animation: slide-right-to-left 20s linear infinite;
+}
+
+.slideshow img {
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slideshow kedua (kiri ke kanan) */
+.slideshow-container2 {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 40px auto;
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slideshow2 {
+    display: flex;
+    animation: slide-left-to-right 20s linear infinite; /* Animasi kiri ke kanan */
+}
+
+.slideshow2 img {
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi kanan ke kiri */
+@keyframes slide-right-to-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animasi kiri ke kanan */
+@keyframes slide-left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
