@@ -7,19 +7,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #000000;
+    color: #333;
+    background-color: #0906064d;
     background-image: url('sitamiang.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-}
-
-.whatsapp-link {
-    background-color: #eb0000;
-}
-
-.maps-link {
-    background-color: #77bc17;
 }
 
 .navbar {
@@ -29,25 +22,54 @@ body {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
-}
-
-.navbar h1 {
+  }
+  
+  .navbar h1 {
     font-size: 1.5rem;
-}
-
-.navbar-links {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-links {
     display: flex;
     gap: 15px;
-}
-
-.navbar-links a {
+  }
+  
+  .navbar-links a {
     text-decoration: none;
     color: #fff;
-    padding: 10px 40px;
+    padding: 10px 20px;
     border-radius: 5px;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-link {
+    background-color: #25d366;
+  }
+  
+  .whatsapp-link:hover {
+    background-color: #1da851;
+  }
+  
+  .maps-link {
+    background-color: #4285f4; 
+  }
+  
+  .maps-link:hover {
+    background-color: #326bcf;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
